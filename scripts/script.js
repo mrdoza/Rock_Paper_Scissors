@@ -1,7 +1,6 @@
 let humanScore = 0;
 let computerScore = 0;
 
-
 function getComputerChoice() {
   let choice = Math.random();
   if (choice < 1 / 3) {
@@ -27,8 +26,8 @@ function getHumanChoice() {
 // console.log(getHumanChoice());
 
 function playRound() {
-    const humanSelection = getHumanChoice();
-const computerSelection = getComputerChoice();
+  const humanSelection = getHumanChoice();
+  const computerSelection = getComputerChoice();
   if (humanSelection === computerSelection) {
     alert("Tie game!");
   } else if (humanSelection === "rock" && computerSelection === "scissors") {
@@ -47,26 +46,26 @@ const computerSelection = getComputerChoice();
 }
 
 function playGame() {
-playRound();
-console.log("You " + humanScore +" - Computer " + computerScore);
+  playRound();
+  console.log("You " + humanScore + " - Computer " + computerScore);
 
-playRound();
-console.log("You " + humanScore +" - Computer " + computerScore);
+  playRound();
+  console.log("You " + humanScore + " - Computer " + computerScore);
 
-playRound();
-console.log("You " + humanScore +" - Computer " + computerScore);
+  playRound();
+  console.log("You " + humanScore + " - Computer " + computerScore);
 
-playRound();
-console.log("You " + humanScore +" - Computer " + computerScore);
+  playRound();
+  console.log("You " + humanScore + " - Computer " + computerScore);
 
-playRound();
-console.log("You " + humanScore +" - Computer " + computerScore);
+  playRound();
+  console.log("You " + humanScore + " - Computer " + computerScore);
 
-if (humanScore > computerScore) {
+  if (humanScore > computerScore) {
     console.log("You win!");
-    } else {
-        console.log("You lose!")
-    }
+  } else {
+    console.log("You lose!");
+  }
 }
 
 playGame();
