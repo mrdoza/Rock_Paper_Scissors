@@ -69,3 +69,22 @@ function playGame() {
 }
 
 playGame();
+
+const header = document.createElement('header');
+header.textContent = 'Rock, Paper Scissors';
+document.body.appendChild(header);
+// Suggested code may be subject to a license. Learn more: ~LicenseLog:268718289.
+
+const rock = document.createElement('button');
+rock.textContent = 'Rock';
+document.body.appendChild(rock);
+
+const paper = document.createElement('button');
+paper.textContent = 'Paper';
+document.body.appendChild(paper);
+
+const scissors = document.createElement('button');
+scissors.textContent = 'Scissors';
+document.body.appendChild(scissors);
+
+
