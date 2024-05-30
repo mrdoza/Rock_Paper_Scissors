@@ -1,41 +1,39 @@
-const header = document.createElement('header');
-header.textContent = 'Rock - Paper - Scissors';
+const header = document.createElement("header");
+header.textContent = "Rock - Paper - Scissors";
 document.body.appendChild(header);
-header.setAttribute("style", "text-align: center; text-decoration: underline; font-size: 30px; font-weight: bold;");
+header.setAttribute(
+  "style",
+  "text-align: center; text-decoration: underline; font-size: 30px; font-weight: bold;"
+);
 
-
-const buttonContainer = document.createElement('div');
+const buttonContainer = document.createElement("div");
 document.body.appendChild(buttonContainer);
 buttonContainer.id = "buttons";
 buttonContainer.setAttribute("style", "height: 100px", "text-align: center;");
 
-const rock = document.createElement('button');
-rock.textContent = 'Rock';
+const rock = document.createElement("button");
+rock.textContent = "Rock";
 buttonContainer.appendChild(rock);
-rock.addEventListener('click', function(
-  event) {
-    playRound(event.target.textContent);
-  });
+rock.addEventListener("click", function (event) {
+  playRound(event.target.textContent);
+});
 
-const paper = document.createElement('button');
-paper.textContent = 'Paper';
+const paper = document.createElement("button");
+paper.textContent = "Paper";
 buttonContainer.appendChild(paper);
-paper.addEventListener('click', function(event) {
+paper.addEventListener("click", function (event) {
   playRound(event.target.textContent);
 });
 
-const scissors = document.createElement('button');
-scissors.textContent = 'Scissors';
+const scissors = document.createElement("button");
+scissors.textContent = "Scissors";
 buttonContainer.appendChild(scissors);
-scissors.addEventListener('click', function(event) {
+scissors.addEventListener("click", function (event) {
   playRound(event.target.textContent);
 });
-
-
 
 let humanScore = 0;
 let computerScore = 0;
-
 
 function getComputerChoice() {
   let choice = Math.random();
@@ -48,7 +46,6 @@ function getComputerChoice() {
     return "Paper";
   }
 }
-
 
 function playRound(a) {
   const humanSelection = a;
@@ -80,7 +77,11 @@ function playRound(a) {
   }
 }
 
-const scoreBoard = document.createElement('div');
+const scoreBoard = document.createElement("div");
 scoreBoard.textContent = "You " + humanScore + " - Computer " + computerScore;
 document.body.appendChild(scoreBoard);
-scoreBoard.setAttribute("style", "text-align: center; font-size: 20px; font-weight: bold;", "height: 100px");
+scoreBoard.setAttribute(
+  "style",
+  "text-align: center; font-size: 20px; font-weight: bold;",
+  "height: 100px"
+);
